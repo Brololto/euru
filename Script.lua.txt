@@ -255,23 +255,10 @@ function GetGitSound(GithubSnd,SoundName)
 	return sound
 end
 -- Create entity
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 0, 0)
-game.Lighting.MainColorCorrection.Contrast = 1
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(80),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
- 
 local Metalsound = Instance.new("Sound", workspace)
 		Metalsound.SoundId = "rbxassetid://9116546593"
 		Metalsound:Play()
-		Metalsound.Volume = 6  
-wait(2)
-local Smilersound = Instance.new("Sound", workspace)
-		Smilersound.SoundId = "rbxassetid://9125712561"
-		Smilersound:Play()
-		Smilersound.Volume = 6        
+		Metalsound.Volume = 6        
 -- Create entity
 game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 0, 0)
 game.Lighting.MainColorCorrection.Contrast = 1
@@ -294,7 +281,7 @@ local entity = Creator.createEntity({
     KillRange = 60,
     BackwardsMovement = false,
     FlickerLights = {
-        false, -- Enabled
+        true, -- Enabled
         2.5, -- Time (seconds)
     },
     Cycles = {
